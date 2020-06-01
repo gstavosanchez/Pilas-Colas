@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DFDFDF;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.gustavosanchez.controlador.MenuAdminController">
+    <stylesheets>
+        <URL value="@/org/gustavosanchez/resourse/menuadmin.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="376.0" prefWidth="570.0" style="-fx-background-color: FFFFFF;" stylesheets="@../resourse/menuadmin.css">
+         <children>
+            <JFXButton fx:id="bttnRegresar" layoutX="-10.0" layoutY="-2.0" onAction="#clickRegresar" prefHeight="32.0" prefWidth="63.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/regresar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <HBox fx:id="hBox" layoutX="31.0" layoutY="89.0" prefHeight="99.0" prefWidth="515.0">
+               <children>
+                  <JFXButton fx:id="bttnUsuario" onAction="#clickUsuario" prefHeight="99.0" prefWidth="156.0" text=" Usuario">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resourse/user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label prefHeight="116.0" prefWidth="16.0" />
+                  <JFXButton fx:id="bttnProducto" onAction="#clickProducto" prefHeight="114.0" prefWidth="167.0" text="Producto">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resourse/pro.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label prefHeight="114.0" prefWidth="22.0" />
+                  <JFXButton fx:id="bttnOferta" onAction="#clickOferta" prefHeight="99.0" prefWidth="155.0" text="Oferta">
+                     <graphic>
+                        <ImageView fitHeight="79.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resourse/oferta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <HBox fx:id="hBoxAbajo" layoutX="114.0" layoutY="202.0" prefHeight="99.0" prefWidth="324.0">
+               <children>
+                  <JFXButton fx:id="bttnReportes" onAction="#clickReportes" prefHeight="106.0" prefWidth="151.0" text="Reportes">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resourse/estadistica.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label prefHeight="106.0" prefWidth="36.0" text=" " />
+                  <JFXButton fx:id="bttnFactura" onAction="#clicFactura" prefHeight="99.0" prefWidth="143.0" text="Factura">
+                     <graphic>
+                        <ImageView fitHeight="67.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resourse/Factura.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <Label layoutX="136.0" layoutY="14.0" prefHeight="51.0" prefWidth="259.0" text="             Menu Principal" textAlignment="CENTER">
+               <font>
+                  <Font name="Cambria Math" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

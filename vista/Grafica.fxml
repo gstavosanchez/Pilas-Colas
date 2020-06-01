@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gustavosanchez.controlador.GraficaController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="13.0" prefHeight="369.0" prefWidth="566.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <BarChart fx:id="grafica" layoutX="18.0" layoutY="23.0" prefHeight="277.0" prefWidth="536.0" title="Reporte Ganancias">
+              <xAxis>
+                <CategoryAxis fx:id="ejeX" label="Productos" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="ejeY" label="Ingresos en Q" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Label layoutX="30.0" layoutY="338.0" text="Reporte Cancelado">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="bttnGenerar" layoutX="162.0" layoutY="334.0" onAction="#clickGenerar" style="-fx-background-color: #C0392B;" text="Generar" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

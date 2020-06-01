@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="331.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gustavosanchez.controlador.NuevaOfertaController">
+   <children>
+      <AnchorPane layoutX="13.0" layoutY="10.0" prefHeight="379.0" prefWidth="305.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <JFXButton fx:id="bttnRegresar" layoutX="6.0" layoutY="8.0" onAction="#clickRegresar" prefHeight="5.0" prefWidth="52.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/flecha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <GridPane layoutX="17.0" layoutY="86.0" prefHeight="205.0" prefWidth="273.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="131.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="166.0" minWidth="10.0" prefWidth="142.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="20.0" prefWidth="113.0" text="Descripcion">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></Label>
+                  <Label text="Descuento en %" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></Label>
+                  <Label text="Prioridad" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></Label>
+                  <Label text="Lista Producto" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></Label>
+                  <Label text="Agregar Producto" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></Label>
+                  <Label text="Carga Masiva" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></Label>
+                  <JFXTextArea fx:id="txtDescripcion" onKeyReleased="#verificarDescripcion" unFocusColor="#1f9384" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></JFXTextArea>
+                  <JFXTextField fx:id="txtDescuento" onKeyReleased="#verificarDescuento" unFocusColor="#1f9384" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Cambria Math" size="16.0" />
+                     </font></JFXTextField>
+                  <JFXComboBox fx:id="comboPrioridad" prefHeight="25.0" prefWidth="170.0" promptText="              Tipo" unFocusColor="#1f9384" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXButton fx:id="bttnProducto" onAction="#clicAgregarProducto" prefHeight="28.0" prefWidth="168.0" style="-fx-background-color: #2471A3;" text="Añadir" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="bttnCarga" onAction="#clickCargaMasiva" prefHeight="28.0" prefWidth="165.0" style="-fx-background-color: #CACFD2;" text="Archivo" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <HBox prefHeight="42.0" prefWidth="172.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <JFXComboBox fx:id="comboProducto" prefHeight="42.0" prefWidth="109.0" promptText="         Lista" unFocusColor="#1f9384" />
+                        <Label prefHeight="64.0" prefWidth="14.0" text=" " />
+                        <JFXTextField fx:id="txtContador" editable="false" prefHeight="46.0" prefWidth="51.0" unFocusColor="#1f9384">
+                           <font>
+                              <Font name="Cambria Math" size="16.0" />
+                           </font></JFXTextField>
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+            <JFXButton fx:id="bttnAgregarOferta" layoutX="180.0" layoutY="340.0" onAction="#clickAgregarOferta" prefHeight="28.0" prefWidth="110.0" style="-fx-background-color: #2ECC71;" text="Agregar" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Math" size="15.0" />
+               </font></JFXButton>
+            <Label layoutX="154.0" layoutY="32.0" prefHeight="25.0" prefWidth="80.0" text="Agregar Oferta">
+               <font>
+                  <Font name="Cambria Math" size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="73.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resourse/of.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

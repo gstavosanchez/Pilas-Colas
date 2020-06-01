@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gustavosanchez.controlador.DetalleCarritoController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="17.0" prefHeight="360.0" prefWidth="561.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <Label layoutX="254.0" layoutY="28.0" prefHeight="17.0" prefWidth="78.0" text="Carrito">
+               <font>
+                  <Font name="Cambria Math" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="20.0" text="Hola, ">
+               <font>
+                  <Font name="Cambria Math" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelNombre" layoutX="51.0" layoutY="21.0" text=" ">
+               <font>
+                  <Font name="Cambria Math" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="bttnRegreso" layoutX="419.0" layoutY="26.0" onAction="#clickRegreso" prefHeight="28.0" prefWidth="125.0" style="-fx-background-color: #DFDFDF;" text="Pantalla Principal">
+               <font>
+                  <Font name="Cambria Math" size="15.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tableView" layoutX="173.0" layoutY="81.0" onMouseClicked="#seleccionarTabla" prefHeight="199.0" prefWidth="318.0">
+              <columns>
+                <TableColumn fx:id="columnProducto" prefWidth="173.0" text="Producto" />
+                <TableColumn fx:id="columnPrecio" prefWidth="143.0" text="Precio" />
+              </columns>
+            </TableView>
+            <Label layoutX="13.0" layoutY="122.0" prefHeight="15.0" prefWidth="67.0" text="Prodcutos : ">
+               <font>
+                  <Font name="Cambria Math" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="155.0" text="Total :">
+               <font>
+                  <Font name="Cambria Math" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelCantidad" layoutX="80.0" layoutY="122.0" text=" ">
+               <font>
+                  <Font name="Cambria Math" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelTotal" layoutX="55.0" layoutY="154.0" text=" ">
+               <font>
+                  <Font name="Cambria Math" size="13.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="bttnPagar" layoutX="21.0" layoutY="187.0" onAction="#clickPagar" text="Pagar">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/tarjeta.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="bttnEliminar" layoutX="215.0" layoutY="306.0" onAction="#clickEliminar" text="Eliminar">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/elimin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="bttnCancelar" layoutX="327.0" layoutY="306.0" onAction="#clickCancelar" prefHeight="28.0" prefWidth="100.0" text="Cancelar">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/cancelar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

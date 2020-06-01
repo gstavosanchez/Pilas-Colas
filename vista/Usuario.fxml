@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gustavosanchez.controlador.UsuarioController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="15.0" prefHeight="371.0" prefWidth="555.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <JFXButton fx:id="btnRegresar" layoutY="7.0" onAction="#clickRegresar" prefHeight="16.0" prefWidth="49.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/flecha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <TableView fx:id="tableViewUsuario" layoutX="75.0" layoutY="81.0" prefHeight="271.0" prefWidth="419.0">
+              <columns>
+                <TableColumn fx:id="columnNombre" prefWidth="75.0" text="Nombre" />
+                <TableColumn fx:id="columnApellido" prefWidth="69.0" text="Apellido" />
+                  <TableColumn fx:id="columnCorreo" prefWidth="92.0" text="Correo" />
+                  <TableColumn fx:id="columnUsuario" prefWidth="84.0" text="Usuario" />
+                  <TableColumn fx:id="columnTipoUsuario" prefWidth="98.0" text="Tipo Usuario" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="60.0" fitWidth="67.0" layoutX="186.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resourse/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="261.0" layoutY="31.0" text="Usuario">
+               <font>
+                  <Font name="Cambria Math" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

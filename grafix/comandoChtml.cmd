@@ -1,0 +1,2 @@
+cd C:\Users\elmer\OneDrive\Documents\NetBeansProjects\ProyectoFinal\src\org\gustavosanchez\grafix
+dot -Tpng "C:\Users\elmer\OneDrive\Documents\NetBeansProjects\ProyectoFinal\src\org\gustavosanchez\grafix\Carrito.dot" -o "C:\Users\elmer\OneDrive\Documents\NetBeansProjects\ProyectoFinal\src\org\gustavosanchez\grafix\Carrito.png"

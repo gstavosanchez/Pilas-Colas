@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gustavosanchez.controlador.ProductoController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="14.0" prefHeight="363.0" prefWidth="566.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <TableView fx:id="tableView" layoutX="26.0" layoutY="49.0" onMouseClicked="#selectTableView" prefHeight="308.0" prefWidth="279.0">
+              <columns>
+                <TableColumn fx:id="columnIdentificador" prefWidth="57.0" text="Identficador" />
+                <TableColumn fx:id="columnNombre" text="Nombre" />
+                  <TableColumn fx:id="columnPrecio" prefWidth="88.0" text="Precio" />
+                  <TableColumn fx:id="collumnExistencia" prefWidth="53.0" text="Existencia" />
+              </columns>
+            </TableView>
+            <GridPane focusTraversable="true" layoutX="320.0" layoutY="89.0" prefHeight="195.0" prefWidth="228.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="101.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="127.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Identificador:">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nombre:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="71.0" text="Precio:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="17.0" prefWidth="82.0" text="Descripcion" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="txtDescripcion" onKeyReleased="#verificarDescipcion" unFocusColor="#1f9384" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="txtExistencia" onKeyReleased="#verificarExistencia" unFocusColor="#1f9384" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <JFXTextField fx:id="txtPrecio" onKeyReleased="#verficarPrecio" unFocusColor="#1f9384" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="txtNombre" onKeyReleased="#verificarNombre" unFocusColor="#1f9384" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="txtIdentificador" onKeyReleased="#verificarIdentificador" unFocusColor="#1f9384" GridPane.columnIndex="1" />
+                  <Label prefHeight="17.0" prefWidth="66.0" text="Existencia" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Imagen" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font></Label>
+                  <JFXButton fx:id="bttnURL" onAction="#clickURL" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #CACFD2;" text="URL" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font></JFXButton>
+                  <Label text="Carga Masiviva" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Cambria Math" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="bttnCargaMasiva" onAction="#clickCargaMasiva" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: #2471A3;" text="Archivo" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </GridPane>
+            <ImageView fx:id="imageView" fitHeight="74.0" fitWidth="88.0" layoutX="395.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton fx:id="bttnRegresar" onAction="#clickRegresar" prefHeight="32.0" prefWidth="23.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/flecha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <HBox layoutX="314.0" layoutY="311.0" prefHeight="38.0" prefWidth="228.0">
+               <children>
+                  <JFXButton fx:id="bttnAgregar" onAction="#clickAgregar" prefHeight="38.0" prefWidth="74.0" style="-fx-background-color: #2ECC71;" text="Agregar" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font></JFXButton>
+                  <Label prefHeight="38.0" prefWidth="10.0" text=" " />
+                  <JFXButton fx:id="bttnEditar" onAction="#clickEditar" prefHeight="38.0" prefWidth="68.0" style="-fx-background-color: #F1C40F;" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font></JFXButton>
+                  <Label prefHeight="50.0" prefWidth="14.0" text=" " />
+                  <JFXButton fx:id="bttnEliminar" onAction="#clickEliminar" prefHeight="38.0" prefWidth="68.0" style="-fx-background-color: #E74C3C;" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Math" size="15.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

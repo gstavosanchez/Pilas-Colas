@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="387.0" prefWidth="465.0" style="-fx-background-color: #DFDFDF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gustavosanchez.controlador.VerOfertaController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="10.0" prefHeight="359.0" prefWidth="430.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <JFXButton fx:id="bttnRegresar" layoutX="14.0" layoutY="14.0" onAction="#clickRegresar" prefHeight="23.0" prefWidth="27.0" text=" ">
+               <graphic>
+                  <ImageView fitHeight="19.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resourse/flecha.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <TableView fx:id="tableView" layoutX="64.0" layoutY="85.0" prefHeight="267.0" prefWidth="302.0">
+              <columns>
+                <TableColumn fx:id="columnId" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="columnDescuento" prefWidth="75.0" text="Descuento" />
+                  <TableColumn fx:id="columnDescripcion" prefWidth="75.0" text="Descripcion" />
+                  <TableColumn fx:id="columnPrioridad" prefWidth="75.0" text="Prioridad" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="65.0" fitWidth="76.0" layoutX="127.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resourse/of.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="215.0" layoutY="38.0" prefHeight="24.0" prefWidth="65.0" text="Oferta">
+               <font>
+                  <Font name="Cambria Math" size="20.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+digraph D {
+node[shape=record];
+graph[pencolor=transparent];
+rankdir=LR;
+p0[label="{<anterior>|<data>Producto :producto2 |<next>}"];
+p1[label="{<anterior>|<data>Producto :producto21 |<next>}"];
+p2[label="{<anterior>|<data>Producto :producto4 |<next>}"];
+
+edge[tailclip=false,arrowtail=dot,dir=both];
+p0:next:c ->p1:anterior;
+p1:next:c ->p2:anterior;
+p1:anterior:c ->p0:next;
+p2:anterior:c ->p1:next;
+
+p2:next:c ->p0:anterior [constraint=false];
+
+p0:anterior:c ->p2:next [constraint=false];
+
+}

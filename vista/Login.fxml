@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="428.0" style="-fx-background-color: #DFDFDF;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.gustavosanchez.controlador.LoginController">
+    <stylesheets>
+        <URL value="@/org/gustavosanchez/resourse/login.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="43.0" layoutY="7.0" prefHeight="382.0" prefWidth="346.0" style="-fx-background-color: FFFFFF;">
+         <children>
+            <JFXButton fx:id="bttnIngresar" layoutX="45.0" layoutY="296.0" onAction="#clickIngresar" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: #1F9384;" text="Ingresar" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font></JFXButton>
+            <JFXTextField fx:id="txtFiedUsuario" layoutX="41.0" layoutY="141.0" prefHeight="25.0" prefWidth="265.0" promptText="Usuario" unFocusColor="#1f9384">
+               <font>
+                  <Font name="Cambria Math" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passField" layoutX="41.0" layoutY="216.0" prefHeight="25.0" prefWidth="265.0" promptText="Contraseña" unFocusColor="#1f9384">
+               <font>
+                  <Font name="Cambria Math" size="16.0" />
+               </font>
+            </JFXPasswordField>
+            <ImageView fitHeight="115.0" fitWidth="129.0" layoutX="109.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resourse/lo.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="bttnRegristrar" layoutX="190.0" layoutY="297.0" onAction="#clickRegistrase" prefHeight="25.0" prefWidth="115.0" style="-fx-background-color: #3498DB;" text="Registrase" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Math" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
